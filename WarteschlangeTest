@@ -1,0 +1,49 @@
+public class PatientenWarteschlange 
+{
+    private final int N;
+    private int n;
+    private Patient[] patienten;
+    
+    public PatientenWarteschlange(int N){
+        this.N = N;
+        patienten = new Patient[N];
+        n = 0;
+    }
+    
+    public int size(){
+        return n;
+    }
+    
+    public boolean isEmpty(){
+       return n == 0;
+    }
+    
+    public void anmelden(Patient patient){
+    }
+   
+    public Patient aufrufen(){
+        Patient patient1 = null;
+        if (anzahlPatienten == 0) 
+        {
+            System.out.println ("Fehler, keine Patienten in der Warteschlange");
+        }
+        else
+        {
+            patient1 = Warteschlange [0];
+            for (int i = 1; i < anzahlPatienten; i++)
+        {
+            Warteschlange[i - 1] = Warteschlange[i];
+        }
+        
+        Warteschlange[anzahlPatienten - 1] = null;
+        anzahlPatienten = anzahlPatienten - 1;
+    }
+    return patient1;
+    }
+
+    
+    @Override
+    public String toString(){
+        return "nicht implementiert";
+    }
+}
