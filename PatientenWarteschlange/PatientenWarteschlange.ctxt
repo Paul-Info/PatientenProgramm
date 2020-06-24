@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=PatientenWarteschlange
+comment1.params=N
+comment1.target=PatientenWarteschlange(int)
+comment2.params=
+comment2.target=void\ anmelden()
+comment3.params=
+comment3.target=void\ abmelden()
+comment4.params=
+comment4.target=int\ AnzahlPatienten()
+comment5.params=
+comment5.target=boolean\ isEmpty()
+numComments=6
