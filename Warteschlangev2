@@ -1,0 +1,67 @@
+public class PatientenWarteschlange {
+    private int n;
+    private int N;
+    private Patient[] patienten;
+    
+    public PatientenWarteschlange(){
+        int N = 9;
+        this.N = N;
+        this.n = n;
+        patienten = new Patient [N];
+    }
+    
+    public void anmelden(Patient patient){
+      
+    if (n < N)
+    {
+        patienten[n] = patient;
+        n = n+1;
+    }
+    
+}
+public Patient abmelden(){
+    Patient ergebnis = null;
+    if (n>0){
+        ergebnis = patienten[0];
+        n=n-1;
+
+        for (int i=0; i>n;i++)
+        {
+            patienten[i]=patienten[i++];
+        }
+       
+    
+    patienten[n]=null;
+
+}
+else {
+    System.out.println ("Fehler, keine Patienten in der Warteschlange");
+
+}
+    return ergebnis;
+
+}
+  public int size(){
+        return n;
+    }
+        public boolean isEmpty(){
+            return n == 0;
+    }
+    public Patient aufrufen(){
+        if (isEmpty()) return null;
+        Patient patient = patienten[0];
+        
+        for (int i = 0; i < n - 1; i++)
+        patienten[i] = patienten[i+1];
+        
+        n--;
+        return patient;
+        
+    }
+   public String toString(){
+       if (isEmpty()) return "leer";
+       String out = " ";
+       for (int i = 0; i < n; i++)
+       return patienten[i] + "/n";
+       return out;
+      
