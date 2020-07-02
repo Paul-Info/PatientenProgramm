@@ -1,0 +1,29 @@
+public class WarteschlangenTest {
+    private final int N = 9;
+    private int n;
+
+    public void testeAnmelden(){
+        PatientenWarteschlange wartezimmer = new PatientenWarteschlange();
+        
+        for(int i = 0; i < N; i++){
+            wartezimmer.anmelden(new Patient("Patient" + i ));
+        }
+        System.out.println(wartezimmer);
+    }
+    public void testeAufrufen(int m){
+        PatientenWarteschlange wartezimmer = new PatientenWarteschlange();
+        for (int i = 0; i < 7; i++)
+        wartezimmer.anmelden(new Patient("Patient" + i ));
+        System.out.println ("Wartezimmer: ");
+        System.out.println (wartezimmer);
+        
+        for (int i = 0;i < m; i++)
+        System.out.println ("aufgerufen: " + wartezimmer.aufrufen()); 
+        
+        System.out.println ("Wartezimmer: ");
+        System.out.println (wartezimmer);
+        
+        
+    }
+    
+}
